@@ -1,0 +1,46 @@
+{
+  "name": "nestjs-minio-client",
+  "version": "0.0.1",
+  "description": "Minio module for NestJS framework",
+  "author": "Uros Karic",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc && npm run build:index",
+    "build:index": "rimraf ./index.js ./index.d.ts && tsc -d --skipLibCheck ./index.ts",
+    "format": "prettier **/**/*.ts --ignore-path ./.prettierignore --write && git status",
+    "prepublish": "npm run format && npm run build"
+  },
+  "dependencies": {
+    "minio": "^7.0.12",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.7.2",
+    "@nestjs/core": "^6.7.2",
+    "@nestjs/testing": "^6.7.1",
+    "@types/jest": "^24.0.18",
+    "@types/minio": "^7.0.4",
+    "@types/node": "^12.7.5",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
