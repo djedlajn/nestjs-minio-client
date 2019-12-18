@@ -1,8 +1,20 @@
 {
   "name": "nestjs-minio-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Minio module for NestJS framework",
-  "author": "Uros Karic",
+  "author": {
+    "name": "Uros Karic",
+    "email": "hello@uroskaric.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djedlajn/nestjs-minio-client"
+  },
+  "keywords": [
+    "nestjs",
+    "minio",
+    "minio-client-sdk"
+  ],
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
