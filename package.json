@@ -21,7 +21,7 @@
     "build": "tsc && npm run build:index",
     "build:index": "rimraf ./index.js ./index.d.ts && tsc -d --skipLibCheck ./index.ts",
     "format": "prettier **/**/*.ts --ignore-path ./.prettierignore --write && git status",
-    "prepublish": "npm run format && npm run build"
+    "prepublishOnly": "npm run format && npm run build"
   },
   "dependencies": {
     "minio": "^7.0.12",
