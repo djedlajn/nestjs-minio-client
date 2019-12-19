@@ -29,7 +29,7 @@ To be able to use Minio client we need to register module for example in `app.mo
 
 ```ts
 import { Module } from '@nestjs/common';
-import { MinioModule } from 'nestjs-config';
+import { MinioModule } from 'nestjs-minio-client';
 
 @Module({
 imports: [
