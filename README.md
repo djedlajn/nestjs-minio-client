@@ -63,6 +63,6 @@ export class ContentService {
 }
 ```
 
-For full Client API see Minio Javascript SDK reference [here]("https://docs.min.io/docs/javascript-client-api-reference.html")
+For full Client API see Minio Javascript SDK reference [here](https://docs.min.io/docs/javascript-client-api-reference.html)
 
 ---
