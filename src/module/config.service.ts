@@ -4,14 +4,20 @@ import { MINIO_CONFIG_OPTIONS } from '../constants';
 
 @Injectable()
 export class MinioService {
-  private readonly minioSdk: Minio.Client;
+  private readonly implMinioSdk: Minio.Client;
+  private readonly implCopyConditions: Minio.CopyConditions;
   constructor(
     @Inject(MINIO_CONFIG_OPTIONS) private options: Minio.ClientOptions,
   ) {
-    this.minioSdk = new Minio.Client(this.options);
+    this.implMinioSdk = new Minio.Client(this.options);
+    this.implCopyConditions = new Minio.CopyConditions();
   }
 
   public get client(): Minio.Client {
-    return this.minioSdk;
+    return this.implMinioSdk;
+  }
+
+  public get copyConditions(): Minio.CopyConditions {
+    return this.implCopyConditions;
   }
 }
