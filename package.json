@@ -1,6 +1,6 @@
 {
   "name": "nestjs-minio-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minio module for NestJS framework",
   "author": {
     "name": "Uros Karic",
@@ -30,17 +30,17 @@
     "rxjs": "^6.5.5"
   },
   "devDependencies": {
-    "@nestjs/common": "^7.0.11",
-    "@nestjs/core": "^7.0.11",
-    "@nestjs/testing": "^7.0.11",
-    "@types/jest": "^25.2.2",
+    "@nestjs/common": "^7.1.2",
+    "@nestjs/core": "^7.1.2",
+    "@nestjs/testing": "^7.1.2",
+    "@types/jest": "^25.2.3",
     "@types/minio": "^7.0.5",
-    "@types/node": "^14.0.1",
+    "@types/node": "^14.0.9",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "ts-jest": "^25.5.1",
+    "ts-jest": "^26.1.0",
     "tslint": "^6.1.2",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "jest": {
     "moduleFileExtensions": [
