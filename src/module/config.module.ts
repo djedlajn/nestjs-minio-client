@@ -17,7 +17,7 @@ export class MinioModule {
         },
         MinioService,
       ],
-      exports: [MinioService],
+      exports: [MinioModule, MinioService],
     };
   }
 
@@ -30,7 +30,7 @@ export class MinioModule {
       module: MinioModule,
       imports: allImports || [],
       providers: [this.createConnectAsyncProviders(options), MinioService],
-      exports: [MinioModule],
+      exports: [MinioModule, MinioService],
     };
   }
 
