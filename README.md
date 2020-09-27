@@ -25,7 +25,7 @@ npm install nestjs-minio-client --save
 
 ### Getting Started
 
-To be able to use Minio client we need to register module for example in `app.module.ts`
+To use Minio client we need to register module for example in `app.module.ts`
 
 ```ts
 import { Module } from '@nestjs/common';
