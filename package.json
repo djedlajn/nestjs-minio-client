@@ -1,6 +1,6 @@
 {
   "name": "nestjs-minio-client",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Minio module for NestJS framework",
   "author": {
     "name": "Uros Karic",
