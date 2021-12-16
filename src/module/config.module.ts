@@ -1,13 +1,13 @@
 import { Module, DynamicModule, Provider } from '@nestjs/common';
 import { MinioService } from './config.service';
 import { MINIO_CONFIG_OPTIONS } from '../constants';
-import { MinioOptions } from '../interfaces/minio.options.interface';
 import { MinioConnectionAsyncOptions } from '../interfaces/minio.async-options.interfaces';
 import { MinioOptionsFactory } from '../interfaces/minio.async-options.factory.interface';
+import { ClientOptions } from 'minio';
 
 @Module({})
 export class MinioModule {
-  static register(options: MinioOptions): DynamicModule {
+  static register(options: ClientOptions): DynamicModule {
     return {
       module: MinioModule,
       providers: [
