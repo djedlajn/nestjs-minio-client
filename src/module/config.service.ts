@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import * as Minio from 'minio';
 import { MINIO_CONFIG_OPTIONS } from '../constants';
 

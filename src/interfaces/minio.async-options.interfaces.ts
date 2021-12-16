@@ -1,6 +1,5 @@
 import { ModuleMetadata, Type } from '@nestjs/common/interfaces';
-
-import { MinioOptions } from './minio.options.interface';
+import { ClientOptions } from 'minio';
 import { MinioOptionsFactory } from './minio.async-options.factory.interface';
 
 export interface MinioConnectionAsyncOptions
@@ -8,5 +7,5 @@ export interface MinioConnectionAsyncOptions
   inject?: any[];
   useExisting?: Type<MinioOptionsFactory>;
   useClass?: Type<MinioOptionsFactory>;
-  useFactory?: (...args: any[]) => Promise<MinioOptions> | MinioOptions;
+  useFactory?: (...args: any[]) => Promise<ClientOptions> | ClientOptions;
 }

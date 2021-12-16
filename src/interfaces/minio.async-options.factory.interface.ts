@@ -1,5 +1,5 @@
-import { MinioOptions } from './minio.options.interface';
+import { ClientOptions } from 'minio';
 
 export interface MinioOptionsFactory {
-  createPiConnectionOptions(): Promise<MinioOptions> | MinioOptions;
+  createPiConnectionOptions(): Promise<ClientOptions> | ClientOptions;
 }
