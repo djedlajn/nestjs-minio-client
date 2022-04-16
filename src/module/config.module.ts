@@ -7,8 +7,9 @@ import { ClientOptions } from 'minio';
 
 @Module({})
 export class MinioModule {
-  static register(options: ClientOptions): DynamicModule {
+  static register(options: ClientOptions & { global?: boolean }): DynamicModule {
     return {
+      global: options.global,
       module: MinioModule,
       providers: [
         {
