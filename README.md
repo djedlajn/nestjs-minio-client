@@ -15,12 +15,14 @@
 
 ```bash
 yarn add nestjs-minio-client
+yarn add -D @types/minio
 ```
 
 **NPM**
 
 ```bash
 npm install nestjs-minio-client --save
+npm install @types/minio --save-dev
 ```
 
 ### Getting Started
@@ -63,15 +65,14 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           port: parseInt(config.get('MINIO_PORT')),
           useSSL: false,
           accessKey: config.get('MINIO_ACCESS_KEY'),
-          secretKey: config.get('MINIO_SECRET_KEY')
-        }
-      }
-    })
+          secretKey: config.get('MINIO_SECRET_KEY'),
+        };
+      },
+    }),
   ],
   providers: [MinioClientService],
-  exports: [MinioClientService]
+  exports: [MinioClientService],
 })
-
 export class MinioClientModule {}
 ```
 
@@ -85,10 +86,10 @@ import { MinioService } from 'nestjs-minio-client';
 
 @Injectable()
 export class ContentService {
-  constructor(private readonly minioClient: MinioService) {}
+  constructor(private readonly minioService: MinioService) {}
 
   async listAllBuckets() {
-    return this.minioClient.client.listBuckets();
+    return this.minioService.client.listBuckets();
   }
 }
 ```
