@@ -23,7 +23,7 @@ jobs:
       - name: Register Token
         run: |
           echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" > /home/runner/work/_temp/.npmrc
-          echo "_auth=$NODE_AUTH_TOKEN" >>  /home/runner/work/_temp/.npmrc
+          echo "//registry.npmjs.org/:_auth=$NODE_AUTH_TOKEN" >>  /home/runner/work/_temp/.npmrc
           echo "email=dot.kadza@gmail.com" >>  /home/runner/work/_temp/.npmrc
           echo "always-auth=true" >>  /home/runner/work/_temp/.npmrc
         env:
