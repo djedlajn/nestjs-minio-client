@@ -9,20 +9,22 @@
 
 - Configure and connect to Minio instance
 
+## Prerequisites
+
+- NestJS version 9 or later.
+
 ### Installation
 
 **Yarn**
 
 ```bash
 yarn add nestjs-minio-client
-yarn add -D @types/minio
 ```
 
 **NPM**
 
 ```bash
 npm install nestjs-minio-client --save
-npm install @types/minio --save-dev
 ```
 
 ### Getting Started
